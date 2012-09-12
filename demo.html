@@ -1,0 +1,234 @@
+<html><body>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Dynamická tabulka</title>
+  <meta http-equiv="content-language" content="cs" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="title" content="Dynamická tabulka"/>
+  <meta name="description" content="Test dynamické tabulky" />
+  <link href="css/demostyle.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="dynamic_table.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+<h1>Tabulka 1</h1>
+<ul>
+<li>pager; nastaven na 15 radku na stranku, vychozi stranka je 3</li>
+<li>razeni; prvni dva sloupce alfanumericky, druhe dva cisla</li>
+<li>filtr; hledani podle podretezce, nerozlisuje mala a velka pismena</li>
+</ul>
+
+<table id="t1" border="0" cellspacing="0" cellpadding="0" >
+
+  <tr class="row1" valign="top"><td align="left">AFN</td><td align="left">Afghanistan Afghanis</td><td >75.3966389450</td><td align ="right">0.0132631907</td></tr>
+  <tr class="row2" valign="top"><td align="left">ALL</td><td align="left">Albania Leke</td><td >149.7174910491</td><td align ="right">0.0066792463</td></tr>
+  <tr class="row2" valign="top"><td align="left">ALL</td><td align="left">Albania Leke</td><td >120.1585000394</td><td align ="right">0.0083223409</td></tr>
+  <tr class="row1" valign="top"><td align="left">DZD</td><td align="left">Algeria Dinars</td><td >99.2654544315</td><td align ="right">0.0100739981</td></tr>
+  <tr class="row1" valign="top"><td align="left">DZD</td><td align="left">Algeria Dinars</td><td >237.3437015458</td><td align ="right">0.0042132991</td></tr>
+  <tr class="row2" valign="top"><td align="left">ARS</td><td align="left">Argentina Pesos</td><td >4.9634293411</td><td align ="right">0.2014736045</td></tr>
+  <tr class="row1" valign="top"><td align="left">AUD</td><td align="left">Australia Dollars</td><td >7.1224860217</td><td align ="right">0.1404004159</td></tr>
+  <tr class="row1" valign="top"><td align="left">AUD</td><td align="left">Australia Dollars</td><td >1.6790396091</td><td align ="right">0.5955785644</td></tr>
+  <tr class="row2" valign="top"><td align="left">BSD</td><td align="left">Bahamas Dollars</td><td >1.5661952419</td><td align ="right">0.6384900000</td></tr>
+  <tr class="row1" valign="top"><td align="left">BHD</td><td align="left">Bahrain Dinars</td><td >0.5903772964</td><td align ="right">1.6938320732</td></tr>
+  <tr class="row2" valign="top"><td align="left">BDT</td><td align="left">Bangladesh Taka</td><td >107.4409935943</td><td align ="right">0.0093074344</td></tr>
+  <tr class="row1" valign="top"><td align="left">BBD</td><td align="left">Barbados Dollars</td><td >3.1088975632</td><td align ="right">0.3216574299</td></tr>
+  <tr class="row2" valign="top"><td align="left">BMD</td><td align="left">Bermuda Dollars</td><td >1.5661952419</td><td align ="right">0.6384900000</td></tr>
+  <tr class="row1" valign="top"><td align="left">BRL</td><td align="left">Brazil Reais</td><td >2.6100330567</td><td align ="right">0.3831369099</td></tr>
+  <tr class="row2" valign="top"><td align="left">BGN</td><td align="left">Bulgaria Leva</td><td >1.9248539683</td><td align ="right">0.5195199306</td></tr>
+  <tr class="row1" valign="top"><td align="left">XOF</td><td align="left">CFA BCEAO Francs </td><td >655.9570000000</td><td align ="right">0.0015244902</td></tr>
+  <tr class="row2" valign="top"><td align="left">XAF</td><td align="left">CFA BEAC Francs</td><td >655.9570000000</td><td align ="right">0.0015244902</td></tr>
+  <tr class="row1" valign="top"><td align="left">CAD</td><td align="left">Canada Dollars</td><td >1.5876523673</td><td align ="right">0.6298608062</td></tr>
+  <tr class="row2" valign="top"><td align="left">CLP</td><td align="left">Chile Pesos</td><td >711.0526398221</td><td align ="right">0.0014063656</td></tr>
+  <tr class="row1" valign="top"><td align="left">CNY</td><td align="left">China Yuan Renminbi</td><td >10.9798117433</td><td align ="right">0.0910762428</td></tr>
+  <tr class="row2" valign="top"><td align="left">COP</td><td align="left">Colombia Pesos</td><td >2758.8529155175</td><td align ="right">0.0003624695</td></tr>
+  <tr class="row1" valign="top"><td align="left">XPF</td><td align="left">Comptoirs Français du Pacifique Francs</td><td >119.3317422434</td><td align ="right">0.0083800000</td></tr>
+  <tr class="row2" valign="top"><td align="left">CRC</td><td align="left">Costa Rica Colones</td><td >769.3151031455</td><td align ="right">0.0012998575</td></tr>
+  <tr class="row1" valign="top"><td align="left">HRK</td><td align="left">Croatia Kuna</td><td >7.2621340976</td><td align ="right">0.1377005694</td></tr>
+  <tr class="row2" valign="top"><td align="left">CZK</td><td align="left">Czech Republic Koruny</td><td >123.6113329888</td><td align ="right">0.0080898731</td></tr>
+  <tr class="row2" valign="top"><td align="left">CZK</td><td align="left">Czech Republic Koruny</td><td >25.2783912042</td><td align ="right">0.0395594796</td></tr>
+  <tr class="row1" valign="top"><td align="left">DKK</td><td align="left">Denmark Kroner</td><td >7.4795219972</td><td align ="right">0.1336983834</td></tr>
+  <tr class="row2" valign="top"><td align="left">DOP</td><td align="left">Dominican Republic Pesos</td><td >52.8371626807</td><td align ="right">0.0189260730</td></tr>
+  <tr class="row2" valign="top"><td align="left">DOP</td><td align="left">Dominican Republic Pesos</td><td >61.9779918245</td><td align ="right">0.0161347596</td></tr>
+  <tr class="row1" valign="top"><td align="left">XCD</td><td align="left">East Caribbean Dollars</td><td >4.1504173910</td><td align ="right">0.2409396226</td></tr>
+  <tr class="row2" valign="top"><td align="left">EGP</td><td align="left">Egypt Pounds</td><td >8.3966076211</td><td align ="right">0.1190957164</td></tr>
+  <tr class="row1" valign="top"><td align="left">EEK</td><td align="left">Estonia Krooni</td><td >15.6466400000</td><td align ="right">0.0639114851</td></tr>
+  <tr class="row2" valign="top"><td align="left">EUR</td><td align="left">Euro</td><td >4.1780000000</td><td align ="right">0.2393489708</td></tr>
+  <tr class="row2" valign="top"><td align="left">EUR</td><td align="left">Euro</td><td >1.0000000000</td><td align ="right">1.0000000000</td></tr>
+  <tr class="row1" valign="top"><td align="left">FJD</td><td align="left">Fiji Dollars</td><td >2.3446036555</td><td align ="right">0.4265113200</td></tr>
+  <tr class="row1" valign="top"><td align="left">FJD</td><td align="left">Fiji Dollars</td><td >2.8580718561</td><td align ="right">0.3498862346</td></tr>
+  <tr class="row2" valign="top"><td align="left">XAU</td><td align="left">Gold Ounces</td><td >0.0017694084</td><td align ="right">565.1606477424</td></tr>
+  <tr class="row1" valign="top"><td align="left">HKD</td><td align="left">Hong Kong Dollars</td><td >12.2030102273</td><td align ="right">0.0819469935</td></tr>
+  <tr class="row2" valign="top"><td align="left">HUF</td><td align="left">Hungary Forint</td><td >247.9130475425</td><td align ="right">0.0040336723</td></tr>
+  <tr class="row1" valign="top"><td align="left">XDR</td><td align="left">IMF Special Drawing Rights</td><td >0.9540000000</td><td align ="right">1.0482180294</td></tr>
+  <tr class="row2" valign="top"><td align="left">ISK</td><td align="left">Iceland Kronur</td><td >115.0699306176</td><td align ="right">0.0086903676</td></tr>
+  <tr class="row2" valign="top"><td align="left">ISK</td><td align="left">Iceland Kronur</td><td >460.9701420539</td><td align ="right">0.0021693379</td></tr>
+  <tr class="row1" valign="top"><td align="left">INR</td><td align="left">India Rupees</td><td >210.1952262369</td><td align ="right">0.0047574820</td></tr>
+  <tr class="row1" valign="top"><td align="left">INR</td><td align="left">India Rupees</td><td >62.7261194380</td><td align ="right">0.0159423221</td></tr>
+  <tr class="row2" valign="top"><td align="left">IDR</td><td align="left">Indonesia Rupiahs</td><td >14424.9714169368</td><td align ="right">0.0000693242</td></tr>
+  <tr class="row1" valign="top"><td align="left">IRR</td><td align="left">Iran Rials</td><td >43966.4145092327</td><td align ="right">0.0000227446</td></tr>
+  <tr class="row1" valign="top"><td align="left">IRR</td><td align="left">Iran Rials</td><td >14037.8079531394</td><td align ="right">0.0000712362</td></tr>
+  <tr class="row2" valign="top"><td align="left">IQD</td><td align="left">Iraq Dinars</td><td >1880.2173878996</td><td align ="right">0.0005318534</td></tr>
+  <tr class="row1" valign="top"><td align="left">ILS</td><td align="left">Israel New Shekels</td><td >5.4581904180</td><td align ="right">0.1832109039</td></tr>
+  <tr class="row2" valign="top"><td align="left">JMD</td><td align="left">Jamaica Dollars</td><td >113.1576062272</td><td align ="right">0.0088372318</td></tr>
+  <tr class="row1" valign="top"><td align="left">JPY</td><td align="left">Japan Yen</td><td >163.5108459020</td><td align ="right">0.0061158023</td></tr>
+  <tr class="row1" valign="top"><td align="left">JPY</td><td align="left">Japan Yen</td><td >424.9646884994</td><td align ="right">0.0023531367</td></tr>
+  <tr class="row2" valign="top"><td align="left">JOD</td><td align="left">Jordan Dinars</td><td >1.1104324265</td><td align ="right">0.9005500705</td></tr>
+  <tr class="row1" valign="top"><td align="left">KES</td><td align="left">Kenya Shillings</td><td >97.4173440461</td><td align ="right">0.0102651125</td></tr>
+  <tr class="row1" valign="top"><td align="left">KES</td><td align="left">Kenya Shillings</td><td >302.9679399834</td><td align ="right">0.0033006793</td></tr>
+  <tr class="row2" valign="top"><td align="left">KWD</td><td align="left">Kuwait Dinars</td><td >0.4162163855</td><td align ="right">2.4025964252</td></tr>
+  <tr class="row2" valign="top"><td align="left">KWD</td><td align="left">Kuwait Dinars</td><td >1.5812060486</td><td align ="right">0.6324286458</td></tr>
+  <tr class="row1" valign="top"><td align="left">LBP</td><td align="left">Lebanon Pounds</td><td >2366.5210105092</td><td align ="right">0.0004225612</td></tr>
+  <tr class="row2" valign="top"><td align="left">MYR</td><td align="left">Malaysia Ringgits</td><td >4.9326536046</td><td align ="right">0.2027306355</td></tr>
+  <tr class="row1" valign="top"><td align="left">MUR</td><td align="left">Mauritius Rupees</td><td >40.2120628358</td><td align ="right">0.0248681597</td></tr>
+  <tr class="row2" valign="top"><td align="left">MXN</td><td align="left">Mexico Pesos</td><td >23.6918977588</td><td align ="right">0.0422085225</td></tr>
+  <tr class="row2" valign="top"><td align="left">MXN</td><td align="left">Mexico Pesos</td><td >16.3844382841</td><td align ="right">0.0610335236</td></tr>
+  <tr class="row1" valign="top"><td align="left">MAD</td><td align="left">Morocco Dirhams</td><td >11.4802658348</td><td align ="right">0.0871059969</td></tr>
+  <tr class="row2" valign="top"><td align="left">NZD</td><td align="left">New Zealand Dollars</td><td >2.0023023070</td><td align ="right">0.4994250851</td></tr>
+  <tr class="row1" valign="top"><td align="left">NOK</td><td align="left">Norway Kroner</td><td >20.2058368964</td><td align ="right">0.0494906499</td></tr>
+  <tr class="row1" valign="top"><td align="left">NOK</td><td align="left">Norway Kroner</td><td >8.0245579414</td><td align ="right">0.1246174565</td></tr>
+  <tr class="row2" valign="top"><td align="left">OMR</td><td align="left">Oman Rials</td><td >0.6029068584</td><td align ="right">1.6586309910</td></tr>
+  <tr class="row2" valign="top"><td align="left">OMR</td><td align="left">Oman Rials</td><td >1.3655840342</td><td align ="right">0.7322874133</td></tr>
+  <tr class="row1" valign="top"><td align="left">PKR</td><td align="left">Pakistan Rupees</td><td >100.6906921578</td><td align ="right">0.0099314046</td></tr>
+  <tr class="row2" valign="top"><td align="left">XPD</td><td align="left">Palladium Ounces</td><td >0.0035474411</td><td align ="right">281.8933350005</td></tr>
+  <tr class="row1" valign="top"><td align="left">PEN</td><td align="left">Peru Nuevos Soles</td><td >4.3437641936</td><td align ="right">0.2302150751</td></tr>
+  <tr class="row2" valign="top"><td align="left">PHP</td><td align="left">Philippines Pesos</td><td >65.4982852167</td><td align ="right">0.0152675753</td></tr>
+  <tr class="row1" valign="top"><td align="left">XPT</td><td align="left">Platinum Ounces</td><td >0.0008003042</td><td align ="right">1249.5249300061</td></tr>
+  <tr class="row2" valign="top"><td align="left">PLN</td><td align="left">Poland Zlotych</td><td >3.4392864414</td><td align ="right">0.2907579863</td></tr>
+  <tr class="row1" valign="top"><td align="left">QAR</td><td align="left">Qatar Riyals</td><td >5.7009306396</td><td align ="right">0.1754099573</td></tr>
+  <tr class="row1" valign="top"><td align="left">QAR</td><td align="left">Qatar Riyals</td><td >3.9165393494</td><td align ="right">0.2553274487</td></tr>
+  <tr class="row2" valign="top"><td align="left">RON</td><td align="left">Romania New Lei</td><td >3.6446929474</td><td align ="right">0.2743715354</td></tr>
+  <tr class="row1" valign="top"><td align="left">RUB</td><td align="left">Russia Rubles</td><td >68.6687152500</td><td align ="right">0.0145626723</td></tr>
+  <tr class="row1" valign="top"><td align="left">RUB</td><td align="left">Russia Rubles</td><td >36.9982301994</td><td align ="right">0.0270283199</td></tr>
+  <tr class="row2" valign="top"><td align="left">SAR</td><td align="left">Saudi Arabia Riyals</td><td >5.8744853639</td><td align ="right">0.1702276775</td></tr>
+  <tr class="row1" valign="top"><td align="left">XAG</td><td align="left">Silver Ounces</td><td >0.3595153564</td><td align ="right">2.7815223528</td></tr>
+  <tr class="row1" valign="top"><td align="left">XAG</td><td align="left">Silver Ounces</td><td >0.0931145704</td><td align ="right">10.7394578043</td></tr>
+  <tr class="row2" valign="top"><td align="left">SGD</td><td align="left">Singapore Dollars</td><td >2.1326895644</td><td align ="right">0.4688914958</td></tr>
+  <tr class="row1" valign="top"><td align="left">SKK</td><td align="left">Slovakia Koruny</td><td >32.3998809692</td><td align ="right">0.0308643109</td></tr>
+  <tr class="row1" valign="top"><td align="left">SKK</td><td align="left">Slovakia Koruny</td><td >32.1730818024</td><td align ="right">0.0310818841</td></tr>
+  <tr class="row2" valign="top"><td align="left">ZAR</td><td align="left">South Africa Rand</td><td >11.9782611884</td><td align ="right">0.0834845713</td></tr>
+  <tr class="row1" valign="top"><td align="left">KRW</td><td align="left">South Korea Won</td><td >1557.0878165672</td><td align ="right">0.0006422245</td></tr>
+  <tr class="row1" valign="top"><td align="left">KRW</td><td align="left">South Korea Won</td><td >736.5025372363</td><td align ="right">0.0013577686</td></tr>
+  <tr class="row2" valign="top"><td align="left">LKR</td><td align="left">Sri Lanka Rupees</td><td >168.6792276648</td><td align ="right">0.0059284123</td></tr>
+  <tr class="row1" valign="top"><td align="left">SDG</td><td align="left">Sudan Pounds</td><td >3.1008238187</td><td align ="right">0.3224949428</td></tr>
+  <tr class="row1" valign="top"><td align="left">SDG</td><td align="left">Sudan Pounds</td><td >3.1641059374</td><td align ="right">0.3160450439</td></tr>
+  <tr class="row2" valign="top"><td align="left">SEK</td><td align="left">Sweden Kronor</td><td >9.3744616204</td><td align ="right">0.1066727926</td></tr>
+  <tr class="row1" valign="top"><td align="left">CHF</td><td align="left">Switzerland Francs</td><td >5.6787713981</td><td align ="right">0.1760944278</td></tr>
+  <tr class="row1" valign="top"><td align="left">CHF</td><td align="left">Switzerland Francs</td><td >1.6229698194</td><td align ="right">0.6161544029</td></tr>
+  <tr class="row2" valign="top"><td align="left">TWD</td><td align="left">Taiwan New Dollars</td><td >47.5136650535</td><td align ="right">0.0210465768</td></tr>
+  <tr class="row1" valign="top"><td align="left">THB</td><td align="left">Thailand Baht</td><td >49.4073971882</td><td align ="right">0.0202398842</td></tr>
+  <tr class="row2" valign="top"><td align="left">TTD</td><td align="left">Trinidad and Tobago Dollars</td><td >9.8043822067</td><td align ="right">0.1019952077</td></tr>
+  <tr class="row1" valign="top"><td align="left">TND</td><td align="left">Tunisia Dinars</td><td >1.2056580369</td><td align ="right">0.8294225803</td></tr>
+  <tr class="row1" valign="top"><td align="left">TND</td><td align="left">Tunisia Dinars</td><td >1.8239909787</td><td align ="right">0.5482483256</td></tr>
+  <tr class="row2" valign="top"><td align="left">TRY</td><td align="left">Turkey New Lira</td><td >2.0106814515</td><td align ="right">0.4973438230</td></tr>
+  <tr class="row1" valign="top"><td align="left">AED</td><td align="left">United Arab Emirates Dirhams</td><td >5.7518520259</td><td align ="right">0.1738570456</td></tr>
+  <tr class="row2" valign="top"><td align="left">GBP</td><td align="left">United Kingdom Pounds</td><td >0.7898087676</td><td align ="right">1.2661292721</td></tr>
+  <tr class="row1" valign="top"><td align="left">USD</td><td align="left">United States Dollars</td><td >1.5661952419</td><td align ="right">0.6384900000</td></tr>
+  <tr class="row2" valign="top"><td align="left">VEF</td><td align="left">Venezuela Bolivares Fuertes</td><td >14.3805772996</td><td align ="right">0.0695382375</td></tr>
+  <tr class="row2" valign="top"><td align="left">VEF</td><td align="left">Venezuela Bolivares Fuertes</td><td >3.3630910429</td><td align ="right">0.2973455037</td></tr>
+  <tr class="row1" valign="top"><td align="left">VND</td><td align="left">Vietnam Dong</td><td >25228.2729023791</td><td align ="right">0.0000396381</td></tr>
+  <tr class="row2" valign="top"><td align="left">ZMK</td><td align="left">Zambia Kwacha</td><td >5411.2045607605</td><td align ="right">0.0001848017</td></tr>
+
+</table>
+
+<hr />
+
+
+<script>
+// tabulka 2
+var opt2 = {
+  colTypes: new Array("alpha", "lastChar", "number", "date", "none"),
+  customTypes: {
+    lastChar: function(a, b){
+	return a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1);
+    }
+  },
+  fadeCreate: {
+    opacity: 10,	// percent
+    sensitivity: 0.8,
+    duration: 20	// = 1 second
+  },
+  filterFunction: function(a, b){
+    return a.search(b);	// case sensitive (default is case insensitive)
+  }
+}
+</script>
+
+
+
+<h1>Tabulka 2</h1>
+<ul>
+<li>razeni; radky: 1: alfanumericky, 2: ukazka vlastniho definovaneho razeni (podle posledniho znaku), 3: cislo, 4: datum, 5: nic</li>
+<li>filtr; ukazka vlastniho definovaneho filtru: podle podretezce, nerozlisuje velka a mala pismena </li>
+<li>efekt postupneho nacitani toolbaru</li>
+<li>toolbar vytvoren v reakci na udalost prejeti mysi pres tabulku</li>
+</ul>
+
+<table id="t2" onmouseover="new DynamicTable(this, opt2)">
+	<tbody>
+		<tr>
+			<td>apple</td>
+			<td>Strawberry</td>
+			<td>45</td>
+			<td>2001-03-13</td>
+			<td>Item 0</td>
+		</tr>
+		<tr>
+			<td>Banana</td>
+			<td>orange</td>
+			<td>7698</td>
+			<td>1789-07-14</td>
+			<td>Item 1</td>
+		</tr>
+		<tr>
+			<td>orange</td>
+			<td>Banana</td>
+			<td>4546</td>
+			<td>1949-07-04</td>
+			<td>Item 2</td>
+		</tr>
+		<tr>
+			<td>Strawberry</td>
+			<td>apple</td>
+			<td>987</td>
+			<td>1975-08-19</td>
+			<td>Item 3</td>
+		</tr>
+		<tr>
+			<td>Pear</td>
+			<td>blueberry</td>
+			<td>98743</td>
+			<td>2001-01-01</td>
+			<td>Item 4</td>
+		</tr>
+		<tr>
+			<td>blueberry</td>
+			<td>Pear</td>
+			<td>4</td>
+			<td>2001-04-18</td>
+			<td>Item 5</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<script>
+// tabulka 1
+var opt1 = {
+  colTypes: new Array("alpha", "alpha", "number", "number"),
+  pager: {
+    rowsCount: 15,
+    currentPage: 3
+  }
+};
+new DynamicTable("t1", opt1);
+
+</script>
+
+</body>
+</html>

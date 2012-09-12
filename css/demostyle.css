@@ -1,0 +1,123 @@
+/**
+ * Tabulka 1
+ */
+
+#t1 .dynamic-table-toolbar { 
+  height: 30px;
+}
+
+#t1 .dynamic-table-filter { 
+  height: 15px;
+  font-size: 9px;
+  border: 1px solid black;
+  display: block;
+  float: left;
+}
+
+/**
+ * tools can be styled individualy
+ * every tool has class name tool-1, tool-2, ..., tool-n
+ */
+#t1 .dynamic-table-toolbar .tool-1 .dynamic-table-filter { 
+  width: 50px;
+}
+#t1 .dynamic-table-toolbar .tool-2 .dynamic-table-filter { 
+  width: 350px;
+}
+#t1 .dynamic-table-toolbar .tool-3 .dynamic-table-filter { 
+  width: 200px;
+}
+#t1 .dynamic-table-toolbar .tool-4 .dynamic-table-filter { 
+  width: 120px;
+}
+
+
+#t1 .dynamic-table-downarrow { 
+  height: 15px;
+  width: 15px;
+  background-image: url(../images/down_arrow.png);
+  cursor: pointer;
+}
+#t1 .dynamic-table-uparrow { 
+  height: 15px;
+  width: 15px;
+  background-image: url(../images/up_arrow.png);
+  cursor: pointer;
+}
+
+#t1 .dynamic-table-pagerbar { 
+  background-color: #F2F5F7;
+}
+
+#t1 .dynamic-table-pagerbar .dynamic-table-page-selector { 
+  display : block;
+  color: orange;
+  text-decoration: none;
+  float: left;
+  width: 20px;
+  margin-right: 2px;
+} 
+
+#t1 .dynamic-table-pagerbar .dynamic-table-page-selector:hover { 
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+#t1 .dynamic-table-pagerbar .dynamic-table-page-selected { 
+  display : block;
+  color: red;
+  text-decoration: none;
+  float: left;
+  width: 20px;
+  margin-right: 2px;
+} 
+
+/**
+ * Tabulka 2
+ */
+#t2 .dynamic-table-filter { 
+  border: 2px solid gray;
+}
+
+#t2 .dynamic-table-downarrow { 
+  height: 18px;
+  width: 20px;
+  background-image: url(../images/down_arrow3.png);
+  cursor: pointer;
+}
+#t2 .dynamic-table-uparrow { 
+  height: 18px;
+  width: 20px;
+  background-image: url(../images/up_arrow3.png);
+  cursor: pointer;
+}
+
+
+#t2 .dynamic-table-pagerbar { 
+  background-color: #F2F5F7;
+  border: 1px dotted black;
+}
+
+#t2 .dynamic-table-pagerbar .dynamic-table-page-selector { 
+  display : block;
+  color: orange;
+  text-decoration: none;
+  float: left;
+  width: 20px;
+  margin-right: 2px;
+} 
+
+#t2 .dynamic-table-pagerbar .dynamic-table-page-selector:hover { 
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+#t2 .dynamic-table-pagerbar .dynamic-table-page-selected { 
+  display : block;
+  color: red;
+  text-decoration: none;
+  float: left;
+  width: 20px;
+  margin-right: 2px;
+} 
+

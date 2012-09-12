@@ -3,6 +3,11 @@ DynamicTable
 
 Make your HTML table dynamic with paging, filters and sorting.
 
+DEMO
+----
+
+Demo is available here: [http://www.daviddurman.com/dynamic-table-javascript-library.html](http://www.daviddurman.com/dynamic-table-javascript-library.html).
+
 USAGE
 -----
 

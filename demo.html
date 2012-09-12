@@ -1,14 +1,9 @@
-<html><body>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Dynamická tabulka</title>
-  <meta http-equiv="content-language" content="cs" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="title" content="Dynamická tabulka"/>
-  <meta name="description" content="Test dynamické tabulky" />
+  <title>DynamicTable - JavaScript library that turns your HTML tables into dynamic interactive tables.</title>
+  <meta name="title" content="DynamicTable - turn your HTML table into dynamic table with filters, sorting and paging."/>
+  <meta name="description" content="DynamicTable - turn your HTML table into dynamic table with filters, sorting and paging. No external JavaScript library needed." />
   <link href="css/demostyle.css" rel="stylesheet" type="text/css" media="all" />
   <script src="dynamic_table.js" type="text/javascript"></script>
 
@@ -17,11 +12,11 @@
 <body>
 
 
-<h1>Tabulka 1</h1>
+<h1>Table 1</h1>
 <ul>
-<li>pager; nastaven na 15 radku na stranku, vychozi stranka je 3</li>
-<li>razeni; prvni dva sloupce alfanumericky, druhe dva cisla</li>
-<li>filtr; hledani podle podretezce, nerozlisuje mala a velka pismena</li>
+<li>pager: 15 rows in one page, default page is the third one</li>
+<li>sorting: the first two columns alphanumerically, the next two by numbers</li>
+<li>filtering; search by substring, case-agnostic</li>
 </ul>
 
 <table id="t1" border="0" cellspacing="0" cellpadding="0" >
@@ -140,11 +135,12 @@
 
 
 <script>
-// tabulka 2
+
+// table 2
 var opt2 = {
-  colTypes: new Array("alpha", "lastChar", "number", "date", "none"),
+  colTypes: ["alpha", "lastChar", "number", "date", "none"],
   customTypes: {
-    lastChar: function(a, b){
+    lastChar: function(a, b) {
 	return a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1);
     }
   },
@@ -153,7 +149,7 @@ var opt2 = {
     sensitivity: 0.8,
     duration: 20	// = 1 second
   },
-  filterFunction: function(a, b){
+  filterFunction: function(a, b) {
     return a.search(b);	// case sensitive (default is case insensitive)
   }
 }
@@ -161,12 +157,12 @@ var opt2 = {
 
 
 
-<h1>Tabulka 2</h1>
+<h1>Table 2</h1>
 <ul>
-<li>razeni; radky: 1: alfanumericky, 2: ukazka vlastniho definovaneho razeni (podle posledniho znaku), 3: cislo, 4: datum, 5: nic</li>
-<li>filtr; ukazka vlastniho definovaneho filtru: podle podretezce, nerozlisuje velka a mala pismena </li>
-<li>efekt postupneho nacitani toolbaru</li>
-<li>toolbar vytvoren v reakci na udalost prejeti mysi pres tabulku</li>
+<li>sorting: rows: 1: alphanumeric, 2: custom (by last character), 3: number, 4: date, 5: nothing</li>
+<li>filtering: custom: by substring, case-agnostic</li>
+<li>Fade-in effect</li>
+<li>Toolbar shows up when hovering over the table</li>
 </ul>
 
 <table id="t2" onmouseover="new DynamicTable(this, opt2)">
@@ -218,9 +214,9 @@ var opt2 = {
 
 
 <script>
-// tabulka 1
+// table 1
 var opt1 = {
-  colTypes: new Array("alpha", "alpha", "number", "number"),
+  colTypes: ["alpha", "alpha", "number", "number"],
   pager: {
     rowsCount: 15,
     currentPage: 3

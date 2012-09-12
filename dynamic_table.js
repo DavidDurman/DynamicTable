@@ -1,106 +1,16 @@
-/*--------------------------------------------------.
-| Dynamic table                                     |
-|                                                   |
-| @author David Durman                              |
-|                                                   |
-| Copyright (c) 2008 David Durman                   |
-|                                                   |
-| USAGE: Usage is very simple. Just create          |
-|	 a DynamicTable object and pass to it	    |
-|	 id of a table or table object itself.      |
-|                                                   |
-|	 new DynamicTable("table1");                |
-|                                                   |
-|	 That's it! Very easy, isn't it?            |
-|                                                   |
-|                                                   |
-| MASTERING DynamicTable:                           |
-|                                                   |
-|	 Example:                                   |
-|                                                   |
-|          var options = {                          |
-|            colTypes: new Array("alpha", "number") |
-|          };                                       |
-|          new DynamicTable("table1", options);     |
-|                                                   |
-|        This means, that first column will be      |
-|        sorted by alphanumeric characters          |
-|        (using localeCompare) and second column    |
-|        by numbers. If the table would have        |
-|        more than two columns, the rest will be    |
-|        sorted by alphanumeric.                    |
-|                                                   |
-|        Using your own sort functions:             |
-|                                                   |
-|          var options = {                          |
-|            colTypes: new Array("myLastChar"),     |
-|            customTypes: {                         |
-|              myLastChar: function(a, b){          |
-|                return a.charCodeAt(a.length - 1)  |
-|                     - b.charCodeAt(b.length - 1); |
-|              }                                    |
-|          };                                       |
-|          new DynamicTable("table1", options);     |
-|                                                   |
-|        Using your own filter function:            |
-|                                                   |
-|          var opt = {                              |
-|            filterFunction: function(a, b){        |
-|              return a.search(b);                  |
-|            }                                      |
-|          };                                       |
-|          new DynamicTable("table1", opt);         |
-|                                                   |
-|          This uses case-insensitive filter        |
-|          function instead of default case-sens.   |
-|                                                   |
-|        Paging:                                    |
-|          var opt = {                              |
-|            pager: {                               |
-|              rowsCount: 10,                       |
-|              currentPage: 3                       |
-|            }                                      |
-|          };                                       |
-|          new DynamicTable("table1", opt);         |
-|                                                   |
-|                                                   |
-|        CASCADING STYLESHEETS:                     |
-|                                                   |
-|          dynamic-table-toolbar                    |
-|          dynamic-table-filter                     |
-|          tool-1, tool-2, ..., tool-n              |
-|          dynamic-table-downarrow                  |
-|          dynamic-table-uparrow                    |
-|          dynamic-table-pagerbar                   |
-|          dynamic-table-page-selector              |
-|          dynamic-table-page-selected              |
-|                                                   |
-|         Example: style for third filter in order: |
-|                                                   |
-|          #table1                                  |
-|             .dynamic-table-toolbar                |
-|             .tool-3                               |
-|             .dynamic-table-filter {               |
-|               width: 50px                         |
-|          }                                        |
-|                                                   |
-|                                                   |
-| LICENCE: DynamicTable is freely distributable     |
-|	   under the terms of MIT-style license.    |
-|                                                   |
-`--------------------------------------------------*/
+// Dynamic table
+// =============
+
+// Copyright (c) 2008-2012 David Durman
+
+(function(window, undefined) {
+    
 
 // THIS AND ONLY THIS MUST BE SET !!!
 var blank_image_src = "images/blank.png";
 
 // all DynamicTable's in document
 var dTables = [];
-
-// very simple debugging function
-function d(obj){
-    return;	// NDEBUG
-    alert("debug:" + obj.toString());
-}
 
 /**
  * Dynamic table object
@@ -709,4 +619,8 @@ DynamicTable.prototype.sortFunctions = {
 DynamicTable.prototype.filterFunction = function(a, b){
     return a.toLowerCase().search(b.toLowerCase());
 }
+
+window.DynamicTable = DynamicTable;
+    
+}(this))
 

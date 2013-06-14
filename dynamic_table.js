@@ -270,7 +270,7 @@ DynamicTable.prototype.pager = function(page){
     }
 
     // hide unnecessary page indexes
-    var showed_rows_count = rows.length - this.rmRows.length;
+    var showed_rows_count = this.rows.length - this.rmRows.length;
     var p_count = Math.ceil(this.rows.length / this.maxRowCount);	// pages count
     var p_cur_count = Math.ceil(showed_rows_count / this.maxRowCount);	// current pages count
 

@@ -3,6 +3,9 @@ DynamicTable
 
 Make your HTML table dynamic with paging, filters and sorting.
 
+Dedicated to [Walter Zorn](http://www.walterzorn.de/en/).
+
+
 DEMO
 ----
 

@@ -120,3 +120,7 @@ LICENSE
 
 MIT license.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DavidDurman/dynamictable/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

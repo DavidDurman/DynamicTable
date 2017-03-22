@@ -92,10 +92,15 @@ function DynamicTable(obj, options){
 	colTools.className = "tool-" + (i + 1);
 
 	if (this.opt.colTypes[i] != "none"){
+        // add options name
+        var name = document.createElement('div');
+        name.innerHTML = options.colNames[i];
+        name = name.firstChild;
+        
 	    // input filter
 	    var filter = document.createElement("input");
 	    filter.type = "text";
-	    filter.style.float = "left";
+	    filter.style.float = "right";
 	    filter.className = "dynamic-table-filter";
 	    DynamicTableEvent.observe(filter, "keypress", this._filterRows);
 	    this.filters.push(filter);
@@ -106,6 +111,7 @@ function DynamicTable(obj, options){
 	    toolBtn.className = "dynamic-table-downarrow";
 	    DynamicTableEvent.observe(toolBtn, "click", this._toolbarClick);
 	    
+	    colTools.appendChild(name);
 	    colTools.appendChild(filter);
 	    colTools.appendChild(toolBtn);
 
